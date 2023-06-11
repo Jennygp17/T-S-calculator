@@ -16,11 +16,74 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script type="text/javascript">
+      function sum() {
+        var val1 = document.getElementById("litres").value;
+        var val2 = document.getElementById("surcharge").value;
+        var sum = (Number(val2) * Number(val1)) / 100;
+        var sum2 = ((Number(val2) * Number(val1)) / 100) * 52;
+        document.getElementById("answer").value = sum;
+        document.getElementById("ananswer").value = sum2;
+      }
+    </script>
   </head>
   <body>
     <div class="container">
-      <div class="whole-page"></div>
+      <div class="whole-page">
+        <h1 class="header">Savings Calculator</h1>
+        <h4 class="context">
+          This calculator will determine the customer's saving if they move
+          their volume from Tesco and/or Sainsburys to UK Fuels
+        </h4>
+        <div class="row images">
+          <div class="col-6 tesco">
+            <img
+              class="img-fluid tesco-logo"
+              src="images/tesco.png"
+              alt="tesco-logo"
+            />
+          </div>
+          <div class="col-6 sainsburys">
+            <img
+              class="img-fluid sainsburys-logo"
+              src="images/sainsburys.png"
+              alt="sainsburys-logo"
+            />
+          </div>
+        </div>
+        <form id="formInput">
+          <input
+            type="text"
+            id="litres"
+            name="litres"
+            placeholder="Litres"
+            autofocus
+            class="res"
+          />
+          <input
+            type="text"
+            id="surcharge"
+            name="surcharge"
+            placeholder="Surcharge"
+            class="res"
+          />
+          <br />
+          <button
+            type="button"
+            name="btn"
+            id="calculate"
+            onclick="sum()"
+            class="btn btn-primary"
+          >
+            Calculate</button
+          ><br /><br />
+          <span class="weekly">Weekly Saving £ </span
+          ><input id="answer" type="text" class="weekly p2" /><br />
+          <span class="annually">Annual Saving £ </span
+          ><input id="ananswer" type="text" class="annually p2" />
+        </form>
+      </div>
     </div>
   </body>
 </html>
