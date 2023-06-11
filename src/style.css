@@ -26,16 +26,16 @@ body {
   font-size: 20px;
 }
 .img-fluid {
-  height: 200px;
+  height: 300px;
 }
 .tesco-logo {
-  height: 150px;
+  height: 250px;
   margin-top: 20px;
 }
 .res {
   width: 350px;
   border-radius: 10px;
-  height: 40px;
+  height: 60px;
   box-shadow: 0px 0px 25px -10px #65565f;
 }
 .btn {
@@ -61,6 +61,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
   width: 140px;
+  border: none;
 }
 .annually {
   font-size: 35px;
@@ -68,7 +69,8 @@ body {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
   width: 140px;
+  border: none;
 }
 .p2 {
-  align-content: center;
+  font-weight: bolder;
 }
